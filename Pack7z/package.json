@@ -1,0 +1,37 @@
+{
+  "name": "pack7z",
+  "displayName": "Pack 7z",
+  "description": "Выбор файлов проекта и упаковка их в 7z с сохранением структуры папок",
+  "version": "0.0.1",
+  "publisher": "local",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "pack7z.pickFiles",
+        "title": "7z: Выбрать файлы и создать архив"
+      },
+      {
+        "command": "pack7z.toggleSelection",
+        "title": "7z: Отметить файл"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "pack7z.pickFiles",
+        "key": "ctrl+alt+p"
+      },
+      {
+        "command": "pack7z.toggleSelection",
+        "key": "tab",
+        "when": "pack7zPickerOpen"
+      }
+    ]
+  }
+}
